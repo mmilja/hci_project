@@ -1,0 +1,21 @@
+.MainContainer{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 9fr 1fr;
+    grid-template-areas:
+      "toolbox canvas"
+      "toolbox canvas";
+  
+  }
+
+@media only screen and (max-width: 500px){
+  .MainContainer{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas:
+      "toolbox toolbox"
+      "canvas canvas";
+  }
+
+}
