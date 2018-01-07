@@ -1,0 +1,34 @@
+.MainContainer{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 9fr 1fr;
+    grid-template-areas:
+      "toolbox canvas"
+      "toolbox canvas";
+  
+  }
+
+/*.NetworkConnection{
+  cursor: url(../../public/images/cursors/NetworkConnection.png), auto;
+}  
+
+.Inspect{
+  cursor: url(../../public/images/cursors/Inspect.png), auto;
+}
+
+.Advanced{
+  cursor: url(../../public/images/cursors/Advanced.png), auto;
+}
+*/
+
+@media only screen and (max-width: 500px){
+  .MainContainer{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas:
+      "toolbox toolbox"
+      "canvas canvas";
+  }
+
+}

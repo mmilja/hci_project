@@ -1,0 +1,28 @@
+.Toolbox{
+    margin: 0;
+    border: black;
+    padding: 0;
+    grid-area: toolbox;
+    border-style: solid;
+    max-width: 500px;
+    min-height: 500px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+    overflow-y: scroll;
+  
+  }
+
+@media only screen and (max-width: 500px){
+    .Toolbox{
+      height: 100%;
+      min-height: 0;
+      flex-direction: row;
+      overflow-x: scroll;
+      overflow-y: hidden;
+   }
+}
+   
