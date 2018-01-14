@@ -8,16 +8,16 @@
   
   }
 
-/*.NetworkConnection{
-  cursor: url(../../public/images/cursors/NetworkConnection.png), auto;
+.NetworkConnection{
+  cursor: '../images/cursors/NetworkConnection.png';
 }  
-
+/*
 .Inspect{
-  cursor: url(../../public/images/cursors/Inspect.png), auto;
+  cursor: url(../images/cursors/Inspect.png), auto;
 }
 
 .Advanced{
-  cursor: url(../../public/images/cursors/Advanced.png), auto;
+  cursor: url(../images/cursors/Advanced.png), auto;
 }
 */
 

@@ -32,9 +32,9 @@ class MainContainer extends Component {
             data: {},
             showInspectModal: false,
             showAdvancedModal: false,
-            type: "normal",
-            takenSquares: [0,0,0,0,0,0,0,0,0],
-            containerDescriptions: ["","","","","","","","",""]
+            type: this.props.type,
+            takenSquares: this.props.takenSquares,
+            containerDescriptions: this.props.containerDescriptions
         };
 
         this.unobserve = observe(this._handleChange.bind(this));
@@ -71,10 +71,10 @@ class MainContainer extends Component {
 
     componentWillMount() {
         Modal.setAppElement('body');
-     }
+    }
 
     componentWillUnmount() {
-		this.unobserve();
+        this.unobserve();
     }
 
     changeState(nextState){
