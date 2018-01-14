@@ -1,6 +1,6 @@
 .MainContainer{
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 2fr 10fr;
     grid-template-rows: 9fr 1fr;
     grid-template-areas:
       "toolbox canvas"
@@ -21,7 +21,7 @@
 }
 */
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 1000px){
   .MainContainer{
     display: grid;
     grid-template-columns: 5fr 5fr;

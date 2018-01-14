@@ -27,12 +27,12 @@ class ToolboxElementDraggable extends Component {
   renderContainer(){
     if(this.props.description == null){
       return(<div className="ToolboxElement"> 
-              <span className="Element"><img className="ElementImage" src={"images/" + this.props.type + ".svg"} alt={this.props.type + " image"}/></span>
+              <span className="Element"><img className="ElementImage" src={"images/" + this.props.type + ".png"} alt={this.props.type + " image"}/></span>
             </div>);
     }
     else{
       return (<div className="ToolboxElement"> 
-                <span className="Element"><img className="ElementImage" src={"images/" + this.props.type + ".svg"} alt={this.props.type + " image"}/></span>
+                <span className="Element"><img className="ElementImage" src={"images/" + this.props.type + ".png"} alt={this.props.type + " image"}/></span>
                 <span className="ElementDescription">{this.props.description}</span> 
               </div>);
     }  

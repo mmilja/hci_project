@@ -123,9 +123,9 @@ class MainContainer extends Component {
     render() {
         const { takenSquares, containerDescriptions, click, data } = this.state;
         return(
-            <div>
-                <ContextMenuTrigger id={"Simple"} holdToDisplay={1000}>
-                    <div className={this.getClassNames()}>
+            <div style={{width:'100%',height:'100%'}}>
+                <ContextMenuTrigger id={"Simple"} holdToDisplay={-1}>
+                    <div className={this.getClassNames()} style={{width:'100%',height:'100%'}}>
                         <Toolbox changeType={this._changeType}/>
                         <Canvas takenSquares={takenSquares} containerDescriptions={containerDescriptions} showModal={this._showModal}/>
                         <Modal isOpen={this.state.showInspectModal} data={data} onRequestClose={() => {this.setState({ showInspectModal: false });}}><h1>Inspect Modal Content</h1></Modal>

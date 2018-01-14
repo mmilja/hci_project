@@ -1,28 +1,178 @@
 .Toolbox{
     margin: 0;
-    border: black;
     padding: 0;
-    grid-area: toolbox;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    border-color: black;
     border-style: solid;
-    max-width: 500px;
+    grid-area: toolbox;
+    max-width: 400px;
     min-height: 500px;
-    height: 95vh;
+    background-color: #fdfdf1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     /*overflow: scroll;*/
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
   
   }
 
-@media only screen and (max-width: 500px){
+.draggableItem{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.draggableItem>h3{
+  margin: 20px;
+  font-weight: normal;
+}
+.draggableItem>.ToolboxElement{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.modeChangeButtons{
+  margin: 5px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.modeChangeButtons>button{
+  color: black;
+  background-color: #fafadb;
+  border-color: #333333;
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+}  
+
+.modeChangeButtons>button:hover{
+  background-color: #e6e6e6; 
+}
+
+.modeChangeButtons>button:focus {
+  outline-color:  gray;
+  outline-width: 5px;
+}
+
+.modeChangeButtons>button.Clicked{
+  background-color: #cccccc;
+  border-color: #1a1a1a;
+  border-top-width: 3px;
+  border-left-width: 3px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.importantButtons{
+  margin: 5px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.importantButtons button{
+  color: black;
+  background-color: #fafadb;
+  border-color: #333333;
+  border-width: 2px;
+}  
+
+.importantButtons button:hover{
+  background-color: #e6e6e6; 
+}
+
+.importantButtons button:focus {
+  outline-color:  gray;
+  outline-width: 5px;
+}
+
+.importantButtons button.Clicked{
+  background-color: #cccccc;
+  border-color: #1a1a1a;
+  border-width: 3px;
+}
+
+.importantButtons>.ToolboxElement{
+  margin: 10px;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1000px){
     .Toolbox{
+      width: 100%;
       height: 100%;
       min-height: 0;
+      max-width: 100%;
+      max-height: 200px;
       flex-direction: row;
       overflow-x: scroll;
       overflow-y: hidden;
+      grid-area: toolbox;
+   }
+
+   .draggableItem{
+     flex-direction: row;
+   }
+   
+   .draggableItem>h3{
+     display: none;
+   }
+
+   .draggableItem>.ToolboxElement{
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     align-content: center;
+   }
+
+   .draggableItem>.ToolboxElement>.ElementDescription{
+     display: inherit;
+     padding: 0;
+     margin: 0;
+   }
+   .modeChangeButtons{
+     flex-direction: row;
+     padding: 0;
+     margin: 0;
+   }
+   .modeChangeButtons>.ToolboxElement{
+     padding: 0;
+     margin: 0;
+     margin-right: 20px;
+     width: 100%;
+     height: 100%;
+     min-width: 150px;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+   }
+
+   .modeChangeButtons>.ToolboxElement>.ElementDescription{
+     padding: 0;
+     margin: 0;
+   }
+
+   .importantButtons{
+     flex-direction: row;
+   }
+   
+   .importantButtons>.ToolboxElement{
+     max-height: 100px;
+     flex-direction: column-reverse;
    }
 }
    

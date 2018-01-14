@@ -21,7 +21,7 @@ export default class Canvas extends Component {
     const description = this.props.containerDescriptions[x];
 
     return (
-    <div key={i} style={{border: 'solid', width: '100%', height: '100%', gridTemplateAreas: position}}>      
+    <div key={i} style={{width: '100%', height: '100%', gridTemplateAreas: position}}>      
       <CanvasSquare position={[x]} showModal={this._showModal}>
         {this.renderPiece(x, description)}
       </CanvasSquare>

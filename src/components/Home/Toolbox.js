@@ -35,10 +35,9 @@ export default class Toolbox extends Component {
 
         return (
             <div className="Toolbox">
-                {this.state.draggableItems.map(description => <ToolboxElementDraggable type={description} description={description} key={description} />)}
-                {this.state.modeChangingItems.map(description => <ToolboxElementMode type={description} description={description} key={description} changeType={this._changeType} currentType={this.state.type}/>)}
-                <ConstructButton />
-                <ToolboxButton/>
+                <span className="draggableItem"><h3>Draggable items:</h3>{this.state.draggableItems.map(description => <ToolboxElementDraggable type={description} description={description} key={description} />)}</span>
+                <span className="modeChangeButtons">{this.state.modeChangingItems.map(description => <ToolboxElementMode type={description} description={description} key={description} changeType={this._changeType} currentType={this.state.type}/>)}</span>
+                <span className="importantButtons"><ConstructButton /> <ToolboxButton/></span>
             </div>
         );
     }

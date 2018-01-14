@@ -40,7 +40,7 @@ export default class App extends Component {
                     <Route path='/Canvas'  render={ () =>  <MainContainer getUpdate={this._getUpdate} type={this.state.type} takenSquares={this.state.takenSquares} containerDescriptions={this.state.containerDescriptions}/>} />
                     <Route path='/Help'  render={ () => <Help /> } />
                     <Route path='/About' render={ () => <About /> } />
-                </Switch> 
+                </Switch>
             </div>  
             </BrowserRouter>
         );
