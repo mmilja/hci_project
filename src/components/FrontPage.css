@@ -1,13 +1,25 @@
 .FrontPage{
-    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 33%;
 }
 
 .docker-image{
-    float: left;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 20px 10px 10px 20px;
+    padding: 20px 10px 10px 20px;
     width: 15%;
     height: 15%;
     min-height: 250px;
@@ -15,11 +27,83 @@
 }
 
 .intro-text{
+    margin: 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    font-size: 1.5em;
+    text-align: left;
 }
 
 .page-help{
+    display: flex;
 
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 100%;
+    height: 33%;
+}
+
+.page-help img{
+    margin: 10px;
+    padding: 10px;
+    max-width: 750px;
+    max-height: 300px;
+}
+
+.last-paragraph{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+}
+
+.last-paragraph>img{
+    margin: 20px 10px 10px 20px;
+    width: 15%;
+    height: 15%;
+    min-height: 250px;
+    min-width: 250px;
+}
+
+.more-info{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.more-info>h2{
+    font-size: 1.8em;
+}
+
+.more-info>p{
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 1000px){
+    .intro{
+        flex-direction: column;
+        height: 50%;
+    }
+
+    .intro-text{
+        font-size: 1em;
+    }
+    .docker-image{
+        min-width: 150px;
+        min-height: 150px;
+    }
+
+    .page-help{
+        flex-direction: column;
+        height: 50%;
+    }
+
+    .last-paragraph{
+       display: none;
+    }
 }

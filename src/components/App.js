@@ -14,7 +14,7 @@ export default class App extends Component {
         super(props);
 
         this.state = {
-            stateList: ['Home','Canvas','Help','About'],
+            stateList: ['Home','Canvas','Help',],
             currentState: 'Home',
             type: 'normal',
             takenSquares: [0,0,0,0,0,0,0,0,0],
@@ -32,14 +32,13 @@ export default class App extends Component {
     render() {
         return(
             <BrowserRouter>
-            <div id="App">
+            <div id="App" className={this.state.type}>
                 <Navbar appGetState={this._appGetState} stateList={this.state.stateList} currentState={this.state.currentState} />
                 <Switch>
                     <Route exact  path='/' render={ () => <FrontPage />} />
                     <Route path='/Home' render={ () => <FrontPage />} />
                     <Route path='/Canvas'  render={ () =>  <MainContainer getUpdate={this._getUpdate} type={this.state.type} takenSquares={this.state.takenSquares} containerDescriptions={this.state.containerDescriptions}/>} />
                     <Route path='/Help'  render={ () => <Help /> } />
-                    <Route path='/About' render={ () => <About /> } />
                 </Switch>
             </div>  
             </BrowserRouter>

@@ -9,10 +9,19 @@ li.NavPicture a{
     text-align: center;
     text-decoration: none;
     margin: 0;
-    padding: 14px 16px;
-    border-radius: 50%;
+    padding: 0;
+    width: 80px;
+    height: 40px;
   }
   
   li.NavPicture a:hover {
     background-color: #111;
+  }
+
+  .NavPicture img{
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 50px;
+    min-width: 80px;
+    min-height: 40px;
   }

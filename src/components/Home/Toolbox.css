@@ -37,6 +37,10 @@
   padding-left: 0;
 }
 
+.draggableItem>.ToolboxElement:hover{
+  cursor: -webkit-grab;
+}
+
 .modeChangeButtons{
   margin: 5px;
   margin-right: 15px;
@@ -54,6 +58,7 @@
   border-left-width: 2px;
   border-bottom-width: 1px;
   border-right-width: 1px;
+  border-radius: 6px;
 }  
 
 .modeChangeButtons>button:hover{
@@ -88,6 +93,7 @@
   background-color: #fafadb;
   border-color: #333333;
   border-width: 2px;
+  border-radius: 4px;
 }  
 
 .importantButtons button:hover{

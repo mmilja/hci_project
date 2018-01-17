@@ -10,7 +10,7 @@ export default class NavbarItem extends Component {
 
         this._handleClick = this._handleClick.bind(this);
     }
-    
+
         render() {
             return(
                 <li className="NavItem"><Link to={"/" + this.props.description} onClick={this._handleClick} >{this.props.description}</Link></li>
