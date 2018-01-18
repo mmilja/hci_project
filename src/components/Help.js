@@ -6,8 +6,9 @@ export default class Help extends Component {
     render() {
         return(
             <div className="Help">
+                <h1>Lorem ipsum</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in massa eget erat venenatis faucibus. Aliquam justo purus, semper vel pellentesque non, varius eu sapien. 
+                    Dolor sit amet, consectetur adipiscing elit. In in massa eget erat venenatis faucibus. Aliquam justo purus, semper vel pellentesque non, varius eu sapien. 
                     Cras nec nulla sed lectus dictum ultrices et vitae enim. Nulla sed accumsan erat. Aliquam vitae felis sodales, aliquet urna ut, scelerisque neque. Fusce convallis dapibus libero ut venenatis. 
                     Sed fringilla augue et nibh vulputate, vel suscipit magna ornare. Pellentesque purus ligula, sodales et feugiat id, cursus et mauris. Duis diam arcu, laoreet convallis est ac, pulvinar facilisis massa. 
                     Nunc vulputate leo non est dictum ornare. Nam lacinia ornare sollicitudin.

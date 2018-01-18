@@ -7,7 +7,7 @@
     border-color: black;
     border-style: solid;
     grid-area: toolbox;
-    max-width: 400px;
+    min-width: 300px;
     min-height: 500px;
     background-color: #fdfdf1;
     display: flex;
@@ -16,6 +16,7 @@
     /*overflow: scroll;*/
     overflow-x: hidden;
     overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif
   
   }
 
@@ -29,12 +30,16 @@
 .draggableItem>h3{
   margin: 20px;
   font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
 }
 .draggableItem>.ToolboxElement{
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 0;
   padding-left: 0;
+  font-size: 1.1em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .draggableItem>.ToolboxElement:hover{
@@ -59,6 +64,8 @@
   border-bottom-width: 1px;
   border-right-width: 1px;
   border-radius: 6px;
+  font-size: 1.1em;
+  font-family: Arial, Helvetica, sans-serif;
 }  
 
 .modeChangeButtons>button:hover{
@@ -90,14 +97,16 @@
 
 .importantButtons button{
   color: black;
-  background-color: #fafadb;
+  background-color: #61B0FE;
   border-color: #333333;
   border-width: 2px;
   border-radius: 4px;
+  font-size: 1.1em;
+  font-family: Arial, Helvetica, sans-serif;
 }  
 
 .importantButtons button:hover{
-  background-color: #e6e6e6; 
+  background-color: #4d8ccb; 
 }
 
 .importantButtons button:focus {
@@ -149,15 +158,24 @@
      padding: 0;
      margin: 0;
    }
+
    .modeChangeButtons{
      flex-direction: row;
      padding: 0;
      margin: 0;
+     font-size: 0.9em;
    }
+
+   .modeChangeButtons:first-child{
+    border-left: black;
+    border: black;
+  }
+
    .modeChangeButtons>.ToolboxElement{
      padding: 0;
      margin: 0;
-     margin-right: 20px;
+     /*margin-right: 20px;*/
+     border: none;
      width: 100%;
      height: 100%;
      min-width: 150px;
@@ -174,11 +192,24 @@
 
    .importantButtons{
      flex-direction: row;
+     margin: 0;
+     padding: 0;
    }
    
+   .importantButtons>.Construct{
+     min-width: 75px;
+     min-height: 180px;
+     margin: 0;
+     padding: 0;
+   }
+
    .importantButtons>.ToolboxElement{
-     max-height: 100px;
+     max-height: 150px;
      flex-direction: column-reverse;
+   }
+
+   .importantButtons>.Construct>.rightImage{
+     /*display: none;*/
    }
 }
    
