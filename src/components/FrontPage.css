@@ -123,6 +123,10 @@
     .intro-text{
         height: 30vh;
     }
+
+    .intro-text>p{
+        margin: 0 30px;
+    }
     
     .intro-picture{
         min-width: 150px;
@@ -133,8 +137,17 @@
         width: 100%;
     }
 
+    .text>p{
+        margin: 0 30px;
+    }
+
     .lowerBox{
         flex-direction: column;
         height: 50vh
+    }
+
+    .lowerBox>.help-image{
+        width: 60%;
+        height: 40%;
     }
 }

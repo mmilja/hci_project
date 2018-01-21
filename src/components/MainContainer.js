@@ -150,23 +150,55 @@ class MainContainer extends Component {
                         <Toolbox changeType={this._changeType}/>
                         <Canvas takenSquares={takenSquares} containerDescriptions={containerDescriptions} showModal={this._showModal}/>
                         <Modal open={this.state.showInspectModal} data={data} onClose={() => {this.setState({ showInspectModal: false });}} little>
-                            <div>
-                                <h2>Simple centered modal</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                                    pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
-                                    hendrerit risus, sed porttitor quam.
-                                </p>
+                            <div className="modal-div">
+                                <h1>Inspect container status:</h1>
+                                <div className="input-div">
+                                    <label>Container Status:</label>
+                                    <label className="container-status-label">Down</label>
+                                </div>
+                                <div className="input-div">
+                                    <label>Container image:</label>
+                                    <input type="text" placeholder="Search DockerHub.." />
+                                </div>
+                                <div className="input-div">
+                                    <label>Container networks:</label>
+                                    <ul className="inline-list">
+                                        <li>home,</li>
+                                        <li>docker,</li>
+                                        <li>internal,</li>
+                                        <li>localhost</li>
+                                    </ul> 
+                                </div>
+                                <div className="command-prompt">
+                                    <label>Enter a direct command to the container:</label>
+                                    <input type="text" placeholder="Enter command here.." />
+                                </div>
                             </div>
                         </Modal>
                         <Modal open={this.state.showAdvancedModal} data={data} onClose={() => {this.setState({ showAdvancedModal: false });}} little>
-                            <div>
-                                <h2>Simple centered modal</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                                    pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
-                                    hendrerit risus, sed porttitor quam.
-                                </p>
+                            <div className="modal-div">
+                                <h1>Advanced container status:</h1>
+                                <div className="input-div">
+                                    <label>Container Status:</label>
+                                    <label className="container-status-label">Down</label>
+                                </div>
+                                <div className="input-div">
+                                    <label>Container image:</label>
+                                    <input type="text" placeholder="Search DockerHub.." />
+                                </div>
+                                <div className="input-div">
+                                    <label>Container networks:</label>
+                                    <ul className="inline-list">
+                                        <li>home,</li>
+                                        <li>docker,</li>
+                                        <li>internal,</li>
+                                        <li>localhost</li>
+                                    </ul> 
+                                </div>
+                                <div className="command-prompt">
+                                    <label>Enter a direct command to the container:</label>
+                                    <input type="text" placeholder="Enter command here.." />
+                                </div>
                             </div>
                         </Modal>
                     </div>

@@ -20,6 +20,60 @@
   cursor: url('../images/cursors/Advanced.png'), auto;
 }
 
+.modal-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.modal-div>h1{
+  font-size: 1.5em !important;
+}
+
+.input-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.input-div>label{
+  padding: 5px
+}
+
+.container-status-label{
+  color: red;
+  font-weight: bold;
+}
+
+.command-prompt{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.command-prompt>label{
+  padding: 5px;
+}
+
+.command-prompt>input{
+  margin: 5px;
+  width: 100%;
+}
+
+.inline-list li{
+  display: inline;
+}
+
+
 
 @media only screen and (max-width: 1000px){
   .MainContainer{
