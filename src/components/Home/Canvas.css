@@ -14,3 +14,8 @@
       "square3 square4 square5"
       "square6 square7 square8";
   }
+
+.Canvas img{
+  width: 100%;
+  height: 100%;
+}

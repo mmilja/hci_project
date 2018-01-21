@@ -4,6 +4,7 @@ import './ToolboxElement.css';
 import PropTypes from 'prop-types';
 import { ItemTypes } from '../Constants';
 import { DragSource } from 'react-dnd';
+import { Images } from '../Constants.js'
 
 const draggingSource = {
     beginDrag(props) {
@@ -20,19 +21,17 @@ function collect(connect, monitor) {
 }
 
 class ToolboxElementDraggable extends Component {
-    constructor(props) {
-        super(props);
-    }
 
   renderContainer(){
+    const imgPath = Images[this.props.type];
     if(this.props.description == null){
       return(<div className="ToolboxElement"> 
-              <span className="Element"><img className="ElementImage" src={"images/" + this.props.type + ".png"} alt={this.props.type + " image"}/></span>
+              <span className="Element"><img className="ElementImage" src={imgPath} alt="container" /></span>
             </div>);
     }
     else{
       return (<div className="ToolboxElement"> 
-                <span className="Element"><img className="ElementImage" src={"images/" + this.props.type + ".png"} alt={this.props.type + " image"}/></span>
+                <span className="Element"><img className="ElementImage" src={imgPath} alt="containerCanvas" /></span>
                 <span className="ElementDescription">{this.props.description}</span> 
               </div>);
     }  

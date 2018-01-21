@@ -5,8 +5,7 @@ export default class ConstructButton extends Component {
     render() {
       return(
         <button className="ToolboxElement Construct">
-          <img className="leftImage" src="../images/Construct.png" alt="Construct"/> 
-          <p className="ConstructButton" >Build</p>     
-          <img className="rightImage" src="../images/Construct.png" alt="Construct"/> 
+          <img className="leftImage" src={require('../../images/Construct.png')} alt="construct"/> 
+          <span className="ConstructButton" >Build</span>     
         </button>);}
   }

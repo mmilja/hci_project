@@ -3,8 +3,7 @@ import './MainContainer.css';
 import './ContextMenu.css';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd';
-import Modal from 'react-modal';
-import PropTypes from 'prop-types';
+import Modal from 'react-responsive-modal';
 
 import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu";
 
@@ -15,7 +14,7 @@ import Canvas from './Home/Canvas.js';
 function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;
-    if (a.length != b.length) return false;
+    if (a.length !== b.length) return false;
   
     for (var i = 0; i < a.length; ++i) {
       if (a[i] !== b[i]) return false;
@@ -55,11 +54,11 @@ class MainContainer extends Component {
     }
 
     _showModal(type, data){
-        if(this.state.type === "Inspect" && this.state.showInspectModal == false){
+        if(this.state.type === "Inspect" && this.state.showInspectModal === false){
             const nextState = { data: data, showInspectModal: true };
             this.changeState(nextState);
         }
-        else if(this.state.type === "Advanced" && this.state.showAdvancedModal == false){
+        else if(this.state.type === "Advanced" && this.state.showAdvancedModal === false){
             const nextState = { data: data, showAdvancedModal: true };
             this.changeState(nextState);
         }
@@ -67,10 +66,6 @@ class MainContainer extends Component {
             const nextState = { data: {}, showInspectModal: false, showAdvancedModal: false };
             this.changeState(nextState);
         }
-    }
-
-    componentWillMount() {
-        Modal.setAppElement('body');
     }
 
     componentWillUnmount() {
@@ -82,12 +77,12 @@ class MainContainer extends Component {
             this.setState(nextState);
         } 
         else{
-            this.state = nextState;
+            //this.state = nextState;
         }
     }
     
     getClassNames(){
-        if(this.state.type == "normal"){
+        if(this.state.type === "normal"){
             return "MainContainer";
         }
         else{
@@ -119,17 +114,61 @@ class MainContainer extends Component {
                 </ContextMenu>);
         }
     }
+
+    RenderInspectModal(){
+        return (
+            <div>
+                <h2>Simple centered modal</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                    pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
+                    hendrerit risus, sed porttitor quam.
+                </p>
+            </div>
+        );
+    }
+
+    RenderAdvancedModal(){
+        return(
+            <div>
+                <h2>Simple centered modal</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                    pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
+                    hendrerit risus, sed porttitor quam.
+                </p>
+            </div>
+        );
+    }
     
     render() {
-        const { takenSquares, containerDescriptions, click, data } = this.state;
+        const { takenSquares, containerDescriptions, data } = this.state;
         return(
             <div style={{width:'100%',height:'100%'}}>
                 <ContextMenuTrigger id={"Simple"} holdToDisplay={-1}>
                     <div className={this.getClassNames()} style={{width:'100%',height:'100%'}}>
                         <Toolbox changeType={this._changeType}/>
                         <Canvas takenSquares={takenSquares} containerDescriptions={containerDescriptions} showModal={this._showModal}/>
-                        <Modal isOpen={this.state.showInspectModal} data={data} onRequestClose={() => {this.setState({ showInspectModal: false });}}><h1>Inspect Modal Content</h1></Modal>
-                        <Modal isOpen={this.state.showAdvancedModal} data={data} onRequestClose={() => {this.setState({ showAdvancedModal: false });}} ><h1>Advanced Modal Content</h1></Modal>
+                        <Modal open={this.state.showInspectModal} data={data} onClose={() => {this.setState({ showInspectModal: false });}} little>
+                            <div>
+                                <h2>Simple centered modal</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                                    pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
+                                    hendrerit risus, sed porttitor quam.
+                                </p>
+                            </div>
+                        </Modal>
+                        <Modal open={this.state.showAdvancedModal} data={data} onClose={() => {this.setState({ showAdvancedModal: false });}} little>
+                            <div>
+                                <h2>Simple centered modal</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                                    pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
+                                    hendrerit risus, sed porttitor quam.
+                                </p>
+                            </div>
+                        </Modal>
                     </div>
                 </ContextMenuTrigger> 
                 {this.showContextMenu()}

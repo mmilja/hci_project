@@ -13,7 +13,7 @@ export default class NavbarPicture extends Component {
     
         render() {
             return(
-                <li className="NavPicture"><Link to='/' onClick={this._handleClick}><img src="../../images/logo.jpg" alt="logo image"/></Link></li>
+                <li className="NavPicture"><Link to='/' onClick={this._handleClick}><img src={require("../../images/logo.jpg")} alt="logo"/></Link></li>
             );
         }
 

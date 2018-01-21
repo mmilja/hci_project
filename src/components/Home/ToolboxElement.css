@@ -5,7 +5,7 @@
     align-items: center;
     text-align: center;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     height: 100%;
     width: 100%;
   
@@ -15,13 +15,6 @@
   display: inherit;
   justify-content: center;
    
-}
-
-img{
-  min-width: 100px;
-  min-height: 50px;
-  width: 80%;
-  height: 80%;
 }
 
 .Mode{
@@ -39,9 +32,9 @@ img{
 }
    
 .ElementDescription{
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
+  flex-direction: row-reverse;*/
   margin-right: 10px;
   padding-right: 10px;
 }
@@ -57,4 +50,5 @@ img{
 .Construct>p{
   width: 100%;
   height: 100%;
+  font-size: 1.1em;
 }

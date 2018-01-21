@@ -18,7 +18,7 @@ export default class About extends Component {
                     Quisque vel suscipit elit. Phasellus porta scelerisque enim.
                 </p>
 
-                <img src="/images/Ghost-people.png" alt="some image"/>
+                <img src="/images/Ghost-people.png" alt="some"/>
 
                 <p>
                     Integer sed nulla facilisis, congue quam id, pulvinar mi. Sed ex turpis, sodales ut purus nec, accumsan finibus nunc. Maecenas magna neque, bibendum eu pharetra sed, eleifend eget ipsum. 
@@ -34,7 +34,7 @@ export default class About extends Component {
                     Curabitur dapibus tellus id leo dictum, sed semper justo faucibus. Pellentesque quis tortor nec urna sollicitudin commodo non non orci. Fusce non lorem ultricies, semper metus non, finibus turpis.
                 </p>
 
-                <img src="/images/docker.svg" alt="another image"/>
+                <img src="/images/docker.svg" alt="another"/>
 
                 <p>
                     Pellentesque pharetra eget tellus in pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer eu imperdiet elit. 

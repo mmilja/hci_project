@@ -26,7 +26,7 @@ export default class Toolbox extends Component {
             this.setState(nextState);
         } 
         else{
-            this.state = nextState;
+            //this.state = nextState;
         }
         this.props.changeType(type);
     }
@@ -35,9 +35,16 @@ export default class Toolbox extends Component {
 
         return (
             <div className="Toolbox">
-                <span className="draggableItem"><h3>Draggable items:</h3>{this.state.draggableItems.map(description => <ToolboxElementDraggable type={description} description={description} key={description} />)}</span>
-                <span className="modeChangeButtons">{this.state.modeChangingItems.map(description => <ToolboxElementMode type={description} description={description} key={description} changeType={this._changeType} currentType={this.state.type}/>)}</span>
-                <span className="importantButtons"><ConstructButton /> <ToolboxButton/></span>
+                <span className="draggableItem">
+                    <h3>Draggable items:</h3>
+                    {this.state.draggableItems.map(description => <ToolboxElementDraggable type={description} description={description} key={description} />)}
+                </span>
+                <span className="modeChangeButtons">
+                    {this.state.modeChangingItems.map(description => <ToolboxElementMode type={description} description={description} key={description} changeType={this._changeType} currentType={this.state.type}/>)}
+                </span>
+                <span className="importantButtons"><ConstructButton /> 
+                    <ToolboxButton/>
+                </span>
             </div>
         );
     }

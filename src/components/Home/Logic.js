@@ -20,7 +20,7 @@ export function observe(o) {
 }
 
 export function canMoveContainer(position) {
-	if(takenSquares[position] == 0)
+	if(takenSquares[position] === 0)
         return true;
     else
         return false;

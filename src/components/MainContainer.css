@@ -9,17 +9,17 @@
   }
 
 .NetworkConnection{
-  cursor: '../images/cursors/NetworkConnection.png';
+  cursor: url('../images/cursors/NetworkConnection.png'), auto;
 }  
-/*
+
 .Inspect{
-  cursor: url(../images/cursors/Inspect.png), auto;
+  cursor: url('../images/cursors/Inspect.png'), auto;
 }
 
 .Advanced{
-  cursor: url(../images/cursors/Advanced.png), auto;
+  cursor: url('../images/cursors/Advanced.png'), auto;
 }
-*/
+
 
 @media only screen and (max-width: 1000px){
   .MainContainer{

@@ -9,7 +9,8 @@
     grid-area: toolbox;
     min-width: 300px;
     min-height: 500px;
-    background-color: #fdfdf1;
+    /*background-color: #fdfdf1;*/
+    background-color: #eee;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,13 +24,13 @@
 .draggableItem{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .draggableItem>h3{
   margin: 20px;
-  font-weight: normal;
+  font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4em;
 }
@@ -37,13 +38,22 @@
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 0;
-  padding-left: 0;
+  padding-left: 30px;
   font-size: 1.1em;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .draggableItem>.ToolboxElement:hover{
   cursor: -webkit-grab;
+}
+
+.draggableItem>.ToolboxElement>.Element>img{
+  min-width: 100px;
+  min-height: 50px;
+  width: 80%;
+  height: 80%;
+  max-height: 60px;
+  max-width: 120px;
 }
 
 .modeChangeButtons{
@@ -57,8 +67,9 @@
 
 .modeChangeButtons>button{
   color: black;
-  background-color: #fafadb;
-  border-color: #333333;
+  /*background-color: #3E4B4F;*/
+  background-color:	#9CD9FF;
+  border-color: black;
   border-top-width: 2px;
   border-left-width: 2px;
   border-bottom-width: 1px;
@@ -68,8 +79,9 @@
   font-family: Arial, Helvetica, sans-serif;
 }  
 
-.modeChangeButtons>button:hover{
-  background-color: #e6e6e6; 
+.modeChangeButtons button:hover{
+  background-color:	#4CCAFC;
+  cursor: pointer;
 }
 
 .modeChangeButtons>button:focus {
@@ -78,17 +90,25 @@
 }
 
 .modeChangeButtons>button.Clicked{
-  background-color: #cccccc;
-  border-color: #1a1a1a;
+  background-color: #4CCAFC;
+  border-color: black;
   border-top-width: 3px;
   border-left-width: 3px;
   border-bottom-width: 2px;
   border-right-width: 2px;
 }
 
+.modeChangeButtons>img{
+  max-height: 80px;
+  max-width: 80px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
 .importantButtons{
   margin: 5px;
   margin-right: 15px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -97,7 +117,6 @@
 
 .importantButtons button{
   color: black;
-  background-color: #61B0FE;
   border-color: #333333;
   border-width: 2px;
   border-radius: 4px;
@@ -105,8 +124,23 @@
   font-family: Arial, Helvetica, sans-serif;
 }  
 
-.importantButtons button:hover{
-  background-color: #4d8ccb; 
+.importantButtons>.Construct{
+  background-color: #61B0FE;
+
+}
+
+.importantButtons>.ButtonGroup>button{
+  background-color: #33ccff;
+}
+
+.importantButtons>.Construct:hover{
+  background-color: #3473b2;
+  cursor: pointer;
+}
+
+.importantButtons>.ButtonGroup>button:hover{
+  background-color: #00ace6;
+  cursor: pointer;
 }
 
 .importantButtons button:focus {
@@ -121,8 +155,19 @@
 }
 
 .importantButtons>.ToolboxElement{
-  margin: 10px;
-  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 5px;
+  padding-right: 30px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.importantButtons>.ButtonGroup{
+  padding: 0px;
 }
 
 @media only screen and (max-width: 1000px){
@@ -148,7 +193,7 @@
 
    .draggableItem>.ToolboxElement{
      flex-direction: column;
-     justify-content: flex-start;
+     justify-content: center;
      align-items: center;
      align-content: center;
    }
@@ -161,12 +206,15 @@
 
    .modeChangeButtons{
      flex-direction: row;
+     justify-content: space-around;
+     align-content: center;
+     align-items: center;
      padding: 0;
      margin: 0;
      font-size: 0.9em;
    }
 
-   .modeChangeButtons:first-child{
+   .modeChangeButtons:first-child .ToolboxElement{
     border-left: black;
     border: black;
   }
@@ -174,10 +222,9 @@
    .modeChangeButtons>.ToolboxElement{
      padding: 0;
      margin: 0;
-     /*margin-right: 20px;*/
-     border: none;
+     margin-right: 20px;
      width: 100%;
-     height: 100%;
+     height: 50%;
      min-width: 150px;
      flex-direction: column;
      justify-content: center;
@@ -190,26 +237,42 @@
      margin: 0;
    }
 
+   .modeChangeButtons>button{
+     border-radius: 0px;
+   }
+
+   .modeChangeButtons:first-child{
+     border-left: black;
+     border-left-width: 2px;
+   }
+
    .importantButtons{
      flex-direction: row;
      margin: 0;
      padding: 0;
+     align-items: center;
    }
    
    .importantButtons>.Construct{
-     min-width: 75px;
-     min-height: 180px;
+     flex-direction: column;
+     min-width: 100px;
+     padding: 0;
+     height: 50%;
      margin: 0;
      padding: 0;
    }
 
-   .importantButtons>.ToolboxElement{
+   .importantButtons>.ButtonGroup{
      max-height: 150px;
-     flex-direction: column-reverse;
+     flex-direction: row;
    }
 
-   .importantButtons>.Construct>.rightImage{
-     /*display: none;*/
+   .SaveButton{
+     margin: 10px;
+   }
+
+   .LoadButton{
+     margin: 10px;
    }
 }
    
